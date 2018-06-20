@@ -3,7 +3,7 @@ Medileaks
 
 Medileaks aims to do the following: 
 
-1. the largest searchable repository with easy-to-read data visualisations and summaries of medical best practice guidelines for (eventually) every single aspect of medical care from surgery to all types of mental health diagnostics, prescription of medication and therapy. 
+1. the largest searchable repository with (hopefully concise) comparisons and summaries of medical best practice guidelines for (eventually) every single aspect of medical care from surgery to all types of mental health diagnostics, prescription of medication and therapy. 
 
 2. publish patient ratings and reports of malpractices/reviews for specific medical procedures, clinicians and departments that are not controlled by the clinicians or hospitals in any way.
 
@@ -27,6 +27,8 @@ They can also refer to it when choosing between doctors. This happens a lot part
 They do not necessarily cover all aspects of medical care. Even if they do, their guidelines may differ from guidelines from other practices. For instance, the [NICE](https://www.nice.org.uk/guidance/ng87) guidelines for ADHD treatment do not mention that the doctor needs to monitor a patient's heartrate while they are on methylphenedate, while it is a recommended step in the [Health guidelines by the Queensland government](https://www.health.qld.gov.au/__data/assets/pdf_file/0028/444367/adult-adhd-gl.pdf). 
 
 This is not to say that the NICE guidelines are erroneous, but if a patient were aware of the existence of a set of perhaps stricter guidelines for what they are going through, they can decide whether they want to potentially choose another clinic, or consult their doctor on the possibility of adding that step if they are worried. 
+
+Hoping to be able to compare best practice guidelines across any set of hospitals on this site.
 
 **3. Why aren't there universal standards for some forms of medical practices?**
 
