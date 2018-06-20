@@ -2,8 +2,11 @@ Medileaks
 ---------
 
 Medileaks is an ongoing project that aims to do the following: 
+
 1. 
+
 2. 
+
 3. 
 
 A universal standard of medical care 
@@ -19,33 +22,27 @@ They can also refer to it when choosing between doctors. This happens a lot part
 
 **2. Why aren't existing best practice guidelines enough?**
 
-They do not necessarily cover all aspects of medical care. Even if they do, their guidelines may differ from guidelines from other practices. For instance, the NICE guidelines for ADHD treatment do not mention that the doctor needs to monitor a patient's heartrate while they are on methylphenedate, while it is a recommended step in the [insert clinic] guidelines. 
+They do not necessarily cover all aspects of medical care. Even if they do, their guidelines may differ from guidelines from other practices. For instance, the NICE guidelines for ADHD treatment do not mention that the doctor needs to monitor a patient's heartrate while they are on methylphenedate, while it is a recommended step in the [Health guidelines by the Queensland government](https://www.health.qld.gov.au/__data/assets/pdf_file/0028/444367/adult-adhd-gl.pdf). 
 
 This is not to say that the NICE guidelines are erroneous, but if a patient were aware of the existence of a set of perhaps stricter guidelines for what they are going through, they can decide whether they want to potentially choose another clinic, or consult their doctor on the possibility of adding that step if they are worried. 
 
 **3. Why aren't there universal standards for some forms of medical practices?**
 
-There are many reasons but one reason is that it's too complicated. For instance, it is too difficult to come up with a general one for all different types of surgery because there are too many and they are too different. 
+To be added.
 
-**4. Are there ways to solve that?**
-
-There has been research done on this particular example for instance, and I'm sure there is research done for other examples as well but I haven't looked at them. 
-
-[insert name] from TU Delft has used Machine Learning algorithms to find patterns in surgical operations to come up with a standardised workflow for them. She's trained an HMM on 10 LapChop operations and used a variety of algorithms to do the pattern recognition. 
-
-So if we can round up existing standards and solutions to the lack of universal standards such as the research results mentioned above, centralise them and make the repository easily searchable, then patients can know not only what is available at the moment, but what can potentially be standardised in the future. 
-
-**5. How do you go about finding guidelines and research papers?**
+**4. How do you go about finding guidelines and research papers?**
 
 Probably use of web scraping tools, but need to think of more time-efficient methods.
 
-**6. How would people query the database?**
+**5. How would people query the database?**
 
 Examples to be added. 
 
-**7. There is so much information. How would you be able to get through all of that if you don't have much time, which is usually the case?**
+**6. There is so much information. How would you be able to get through all of that if you don't have much time, which is usually the case?**
 
 I will be using some text summarisation algorithms and data visualisation tools so that the users are shown answers to their main concerns, which are defined by personal experience, feedback from users and research.
+
+Another solution to deal with comprehending big data is to train machine learning algorithms on medical procedure data so that they can detect anomalies. For instance, Loubna Bouarfa from TU Delft has used Machine Learning algorithms to find patterns in surgical operations[1] in order to detect anomalies in surgery. A record of mistakes detected over time can then be helpful for making predictions for the success rate of surgical or any medical procedure.
 
 Predictions
 ----------
@@ -76,13 +73,11 @@ In Medileaks, we'd like ratings and reviews to be specific to particular medical
 Algorithms and software used
 ----------
 
-*Text Summarisation Algorithms*
+Please refer to the wiki for more details. 
 
-to be added.
-
-*Data Visualisation Tools*
-
-to be added.
+References
+----------
+[1] Loubna Bouarfa. Recognizing surgical patterns. 30 May 2012:TU Delft Aula.
 
 Contributing 
 ----------
