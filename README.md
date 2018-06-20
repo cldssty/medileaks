@@ -86,13 +86,7 @@ to be added.
 
 Contributing 
 ----------
-here you need to set small problems in the issue tracker and label them easy or good first time contribution 
-problems have to be well-defined, extremely clear and can be done with low effort so that people get satisfaction quickly
-you should also respond to contributions quickly
-and break your project up into many small pieces so that people can choose what to work on
-you need to find a way to make your issue tracker populous though
-I think you should also manage your issue tracker so that there aren't two conflicting solutions to the same problem and you don't encourage two solutions if they are going to clash 
-or if you do, warn contributors beforehand
+If you'd like to contribute, please refer to the [Contributing Guidelines](https://github.com/cldssty/medileaks/wiki/Contributing)
 
 
 
