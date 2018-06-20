@@ -86,7 +86,7 @@ to be added.
 
 Contributing 
 ----------
-If you'd like to contribute, please refer to the [Contributing Guidelines](https://github.com/cldssty/medileaks/wiki/Contributing)
+Contributions are very welcome. Please first refer to the [Contributing Guidelines](https://github.com/cldssty/medileaks/wiki/Contributing).
 
 
 
