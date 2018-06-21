@@ -1,0 +1,4 @@
+include medileaks/schema.sql
+graft medileaks/static
+graft medileaks/templates
+global-exclude *.pyc
