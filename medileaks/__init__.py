@@ -28,5 +28,8 @@ def create_app(test_config=None):
     def welcome_message():
         return 'Welcome to Medileaks!'
 
+    from . import db
+    db.init_app(app)
+
     return app
 
