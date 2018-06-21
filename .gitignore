@@ -105,3 +105,19 @@ venv.bak/
 
 # todo list 
 TODO.txt
+
+# web 
+venv/
+*.pyc
+__pycache__/
+instance/
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.idea/
+*.swp
+*~
