@@ -6,6 +6,6 @@ def test_config():
     assert create_app({'TESTING': True}).testing
 
 
-def test_hello(client):
+def test_welcome_message(client):
     response = client.get('/home')
     assert response.data == b'Welcome to Medileaks!'
