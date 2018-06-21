@@ -31,5 +31,14 @@ def create_app(test_config=None):
     from . import db
     db.init_app(app)
 
+    from . import guidelines
+    app.register_blueprint(guidelines.bp)
+
+    from . import reports_and_ratings
+    app.register_blueprint(reports_and_ratings.bp)
+
+    from . import predictions
+    app.register_blueprint(predictions.bp)
+
     return app
 
