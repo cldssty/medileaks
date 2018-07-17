@@ -3,7 +3,7 @@ Medileaks
 
 Medileaks aims to do the following: 
 
-1. become the largest searchable repository with (hopefully concise) comparisons and summaries of medical best practice guidelines for (eventually) every single aspect of medical care from surgery to all types of mental health diagnostics, prescription of medication and therapy. 
+1. become the largest searchable repository with easy-to-read comparisons and summaries of medical best practice guidelines for every single aspect of medical care from surgery to all types of mental health diagnostics, prescription of medication and therapy. 
 
 2. publish patient ratings and reports of malpractices/reviews for specific medical procedures, clinicians and departments that are not controlled by the clinicians or hospitals in any way.
 
