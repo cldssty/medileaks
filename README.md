@@ -24,7 +24,7 @@ They can also refer to it when choosing between doctors. This happens a lot part
 
 **2. Why aren't existing best practice guidelines enough?**
 
-They do not necessarily cover all aspects of medical care. Even if they do, their guidelines may differ from guidelines from other practices. For instance, the [NICE](https://www.nice.org.uk/guidance/ng87) guidelines for ADHD treatment do not mention that the doctor needs to monitor a patient's heartrate while they are on methylphenedate, while it is a recommended step in the [Health guidelines by the Queensland government](https://www.health.qld.gov.au/__data/assets/pdf_file/0028/444367/adult-adhd-gl.pdf). 
+They do not necessarily cover all aspects of medical care. Even when multiple sets of guidelines cover the same area of medical practice, they do not necessarily agree. For instance, the [NICE](https://www.nice.org.uk/guidance/ng87) guidelines for ADHD treatment do not mention that the doctor needs to monitor a patient's heartrate while they are on methylphenedate, while it is a recommended step in the [Health guidelines by the Queensland government](https://www.health.qld.gov.au/__data/assets/pdf_file/0028/444367/adult-adhd-gl.pdf). 
 
 This is not to say that the NICE guidelines are erroneous, but if a patient were aware of the existence of a set of perhaps stricter guidelines for what they are going through, they can decide whether they want to potentially choose another clinic, or consult their doctor on the possibility of adding that step if they are worried. 
 
