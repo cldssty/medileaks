@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask
+from flask import Flask, render_template
 
 def create_app(test_config=None):
     # create and configure the app
@@ -23,10 +23,10 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # temporary code for home page
+
     @app.route('/home')
     def welcome_message():
-        return 'Welcome to Medileaks!'
+        return render_template('home.html')
 
     from . import db
     db.init_app(app)
