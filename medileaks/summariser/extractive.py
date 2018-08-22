@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """TextRank summariser using NLTK.
    NLTK implements the similarity measure for us.
+   
    Basic idea:
    1. use similarity measure to build adjacency matrix 
    2. A[i][j] contains the similarity measure between sentences i and j
@@ -24,7 +25,7 @@ def summarise(content):
            content (beautifulsoup object): Unsummarised text.
        
        Returns:
-           summary (list of strings): List of sentences that summarise content.
+           list: Summary. List of sentences that summarise content.
 
     """
     summary = set()
@@ -47,8 +48,8 @@ def build_matrix(content):
            content (beautifulsoup object): Unsummarised text.
        
        Returns:
-           rows (list of lists): Matrix of similarity coefficients.
-           tokenised (list) : Tokenised content.
+           list of lists: rows. Matrix of similarity coefficients.
+           list: tokenised. Tokenised content.
     """
     # use some parser to get sentences
     stop_words = set()
@@ -78,7 +79,7 @@ def similarity(s_1, s_2, stop_words=None):
            stop_words (set): Set of stopwords.
        
        Returns:
-           similarity (float): Similarity coeffcient between the two sentences.
+           float: similarity. Similarity coeffcient between the two sentences.
     """
     if stop_words == None: stop_words = []
     s_1_words = word_tokenize(s_1) 
