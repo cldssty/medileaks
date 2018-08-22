@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+"""Functions for authentication."""
+
 import functools
 
 from flask import (
