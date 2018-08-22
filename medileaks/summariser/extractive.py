@@ -25,7 +25,7 @@ def summarise(content):
            content (beautifulsoup object): Unsummarised text.
        
        Returns:
-           list: Summary. List of sentences that summarise content.
+           list: summary. List of sentences that summarise content.
 
     """
     summary = set()
