@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""Functions for querying the database.
+    
+   Todo:
+       To be replaced by elasticsearch.
+"""
 import sqlite3
 
 import click
@@ -12,7 +18,7 @@ def get_db():
             current_app.config['DATABASE'],
             detect_types=sqlite3.PARSE_DECLTYPES
         )
-        g.db.row_factory = sqlite3.Row
+        g.db.row_factory = sqlite3.Row # replace this with an equivalent in MongoDB
 
     return g.db
 
@@ -26,7 +32,7 @@ def close_db(e=None):
 def init_db():
     db = get_db()
 
-    with current_app.open_resource('schema.sql') as f:
+    with current_app.open_resource('schema.sql') as f: # replace schema.sql with a MongoDB file
         db.executescript(f.read().decode('utf8'))
 
 
