@@ -18,7 +18,15 @@ import numpy as np
 
 
 def summarise(content):
-    """Returns list of sentences that summarise given content."""
+    """Generates list of sentences that summarise given content.
+       
+       Args:
+           content (beautifulsoup object): Unsummarised text.
+       
+       Returns:
+           summary (list of strings): List of sentences that summarise content.
+
+    """
     summary = set()
     threshold = 0.8 # to be tested
     matrix, tokenised = build_matrix(content) 
@@ -33,13 +41,19 @@ def summarise(content):
 
 
 def build_matrix(content):
-    """Returns similarity matrix of raw text content.
-       Content is a list of strings.
+    """Creates similarity matrix of raw text content.
+       
+       Args:
+           content (beautifulsoup object): Unsummarised text.
+       
+       Returns:
+           rows (list of lists): Matrix of similarity coefficients.
+           tokenised (list) : Tokenised content.
     """
     # use some parser to get sentences
     stop_words = set()
     seen = set()
-    tokenised = sent_tokenize(content) # is this the right datatype for sent_tokenize?
+    tokenised = sent_tokenize(content)
     rows = [0]*len(tokenised)
     for sentence in tokenised:
         for word in word_tokenize(sentence):
@@ -56,7 +70,16 @@ def build_matrix(content):
 
 
 def similarity(s_1, s_2, stop_words=None):
-    """Returns similarity between the two sentences."""
+    """Get similarity between the two sentences.
+
+       Args:
+           s_1 (string): Sentence.
+           s_2 (string): Sentence.
+           stop_words (set): Set of stopwords.
+       
+       Returns:
+           similarity (float): Similarity coeffcient between the two sentences.
+    """
     if stop_words == None: stop_words = []
     s_1_words = word_tokenize(s_1) 
     s_2_words = word_tokenize(s_2)
@@ -73,9 +96,9 @@ def similarity(s_1, s_2, stop_words=None):
             v_1[all_words.index(word)] += 1
     for word in s_2_words:
         if word not in stop_words:
-            v_2[all_words.index(word)] += 1
-    # return similarity 
-    return 1-cosine_distance(v_1, v_2)
+            v_2[all_words.index(word)] += 1 
+    similarity = 1-cosine_distance(v_1, v_2) 
+    return similarity
 
 
 def to_html(summary):
