@@ -98,11 +98,4 @@ def similarity(s_1, s_2, stop_words=None):
         if word not in stop_words:
             v_2[all_words.index(word)] += 1 
     similarity = 1-cosine_distance(v_1, v_2) 
-    return similarity
-
-
-def to_html(summary):
-    """Returns summary in html format. Not sure if this makes sense.
-       To be implemented.
-    """
-    return summary
+    return similarity 
