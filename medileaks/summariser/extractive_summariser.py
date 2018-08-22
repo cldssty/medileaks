@@ -10,6 +10,11 @@
    5. everytime you see a row, you pick the sentences that are similar to it (by defining some sensible threshold)
    6. pick this sentence, eject all rows corresponding to this sentnece and the ones it is similar to
    7. repeat until matrix is empty
+   
+   Todo: 
+       1. Test threshold.
+       2. Add tests for all functions.
+   
 """
 
 from nltk.corpus import brown, stopwords
@@ -88,8 +93,7 @@ def similarity(s_1, s_2, stop_words=None):
     for word in s_2_words:
         if word not in all_words:
             all_words.add(word)
-    # count number of occurrences of each word in each sentence
-    all_words = list(all_words)
+    all_words = list(all_words) # count number of occurrences of each word in each sentence
     v_1 = [0]*len(all_words)
     v_2 = [0]*len(all_words)
     for word in s_1_words:
