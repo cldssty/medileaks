@@ -54,8 +54,7 @@ def log_error(e):
 
 
 def get_raw_best_practices(url):
-    """
-    Downloads the page where the list of best practices is found.
+    """Downloads the page where the list of best practices is found.
 
     Args:
         url (string): Webpage to be scraped.
