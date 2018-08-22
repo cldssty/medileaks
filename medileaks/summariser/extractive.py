@@ -1,0 +1,85 @@
+# -*- coding: utf-8 -*-
+"""TextRank summariser using NLTK.
+   NLTK implements the similarity measure for us.
+   Basic idea:
+   1. use similarity measure to build adjacency matrix 
+   2. A[i][j] contains the similarity measure between sentences i and j
+   3. sentences that are similar to each other can be represented by 1 of the sentences
+   4. naive way of doing this is literally just to go through the matrix row by row
+   5. everytime you see a row, you pick the sentences that are similar to it (by defining some sensible threshold)
+   6. pick this sentence, eject all rows corresponding to this sentnece and the ones it is similar to
+   7. repeat until matrix is empty
+"""
+
+from nltk.corpus import brown, stopwords
+from nltk.cluster.util import cosine_distance
+from nltk.tokenize import sent_tokenize, word_tokenize
+import numpy as np
+
+
+def summarise(content):
+    """Returns list of sentences that summarise given content."""
+    summary = set()
+    threshold = 0.8 # to be tested
+    matrix, tokenised = build_matrix(content) 
+    matrix = np.sort(matrix)
+    for row in matrix:
+        for i in range(len(row)):
+            if row[i] >= threshold:
+                np.delete(matrix, i, 0) 
+        summary.add(tokenised[i])
+    summary = to_html(summary)
+    return summary
+
+
+def build_matrix(content):
+    """Returns similarity matrix of raw text content.
+       Content is a list of strings.
+    """
+    # use some parser to get sentences
+    stop_words = set()
+    seen = set()
+    tokenised = sent_tokenize(content) # is this the right datatype for sent_tokenize?
+    rows = [0]*len(tokenised)
+    for sentence in tokenised:
+        for word in word_tokenize(sentence):
+            if word in stopwords.words('english'):
+                stop_words.add(word)
+    for i in range(len(tokenised)):
+        sentence = tokenised[i]
+        seen.add(sentence)
+        vector = np.array([similarity(sentence, s, stop_words) for s in tokenised and s not in seen]) 
+        rows[i] == vector 
+    for row in rows: 
+        row = row/sum(row)
+    return rows, tokenised
+
+
+def similarity(s_1, s_2, stop_words=None):
+    """Returns similarity between the two sentences."""
+    if stop_words == None: stop_words = []
+    s_1_words = word_tokenize(s_1) 
+    s_2_words = word_tokenize(s_2)
+    all_words = s_1_words
+    for word in s_2_words:
+        if word not in all_words:
+            all_words.add(word)
+    # count number of occurrences of each word in each sentence
+    all_words = list(all_words)
+    v_1 = [0]*len(all_words)
+    v_2 = [0]*len(all_words)
+    for word in s_1_words:
+        if word not in stop_words:
+            v_1[all_words.index(word)] += 1
+    for word in s_2_words:
+        if word not in stop_words:
+            v_2[all_words.index(word)] += 1
+    # return similarity 
+    return 1-cosine_distance(v_1, v_2)
+
+
+def to_html(summary):
+    """Returns summary in html format. Not sure if this makes sense.
+       To be implemented.
+    """
+    return summary
