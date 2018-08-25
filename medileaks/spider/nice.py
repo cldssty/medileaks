@@ -62,17 +62,16 @@ def get_raw_best_practices(url):
     Returns:
         list: Best practices. Returns list of html elements containing best practices.
     """
-    url = url
     response = simple_get(url)
+    raw_best_practices = set()
 
     if response is not None:
         soup = BeautifulSoup(response, 'html.parser')
         start_at = soup.find('a', id='recommendations') 
         stop_at = soup.find('div', class_='section', title='Terms used in this guideline.') 
-        raw_best_practices = set()
         while stop_at != start_at: 
             raw_best_practices.add(start_at.get_text(strip=True)) 
             start_at = start_at.find_next() 
         return list(raw_best_practices)
 
-    raise Exception('Error retrieving contents at {}'.format(url))
+    return response

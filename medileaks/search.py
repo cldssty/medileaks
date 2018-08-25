@@ -17,7 +17,7 @@ from flask import (
     flash, Blueprint, g, redirect, render_template, request, session, url_for
 )
 
-from spider.spider import get_best 
+from spider.nice import get_raw_best_practices 
 
 from summariser.extractive_summariser import summarise 
 
@@ -32,7 +32,7 @@ def search():
         if medical_procedure is None:
             error = 'Please input a medical procedure.'
         else:
-            content, sources = get_best(medical_procedure) 
+            content = get_raw_best_practices(https://www.nice.org.uk/guidance/ng87/chapter/Recommendations) 
             if content is None: 
                 error = "No results found for {}.".format(medical_procedure)
         
