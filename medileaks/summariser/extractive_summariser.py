@@ -42,7 +42,6 @@ def summarise(content):
             if row[i] >= threshold:
                 np.delete(matrix, i, 0) 
         summary.add(tokenised[i])
-    summary = to_html(summary)
     return summary
 
 
